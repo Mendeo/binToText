@@ -2,10 +2,10 @@
 const fs = require('fs');
 const path = require('path');
 const filePath = process.argv[2];
+const alphabet = fs.readFileSync(process.argv[3]).toString();;
 const file = fs.readFileSync(filePath);
 const fileName = path.basename(filePath);
 const dateTime = new Date();
-const alphabet = fs.readFileSync('alphabet.txt').toString();
 console.log(filePath, alphabet);
 const base = require('base-x')(alphabet);
 
