@@ -7,7 +7,7 @@ const file = fs.readFileSync(filePath);
 const fileName = path.basename(filePath);
 const dateTime = new Date();
 console.log(filePath, alphabet);
-const base = require('base-x')(alphabet);
+const base = require('base-x').default(alphabet);
 
 const data = dateTime.toString() + '\n' + fileName + '\n' + alphabet + '\n' + base.encode(file);
 
